@@ -7,7 +7,7 @@
 
 string[] GetArrayThreeChars(string[] array, int charNumber)
 {
-    string[] newArray = new string[3];
+    string[] newArray = new string[array.Length];
     int j = 0;
 
     for (int i = 0; i < array.Length; i++)
@@ -21,9 +21,8 @@ string[] GetArrayThreeChars(string[] array, int charNumber)
     return newArray;
 }
 
-
 string[] sourceArray = {"Hello", ",", "world", "!", "Hi!"};
 int charNumber = 3;
 string[] resultArray = GetArrayThreeChars(sourceArray, charNumber);
 
-Console.WriteLine("[{0}]", string.Join(", ", resultArray));
+for (int i = 0; i < resultArray.Length; i++) Console.Write($"{resultArray[i]} ");
